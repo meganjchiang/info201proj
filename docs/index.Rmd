@@ -9,6 +9,33 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, echo = FALSE}
+# Summary Info
+source("../source/summary_info.R")
+```
+
+```{r, echo = FALSE}
+# Summary Info Table
+source("../source/table_summary_info.R")
+```
+
+```{r, echo = FALSE}
+# Chart 1
+source("../source/first_chart.R")
+```
+
+```{r, echo = FALSE}
+# Chart 2
+source("../source/second_chart.R")
+```
+
+```{r, echo = FALSE}
+# Chart 3
+source("../source/third_chart.R")
+```
+
+
+
 ## What is this file for?
 
 * This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
@@ -24,7 +51,6 @@ knitr::opts_chunk$set(echo = TRUE)
 source("../source/data_access.R")
 data_access_test()
 ```
-
 ### Example 2: Initialize a variable and then use it
 ```{r}
 # Example 1: This function was "sourced" above
