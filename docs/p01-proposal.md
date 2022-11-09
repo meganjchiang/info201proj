@@ -91,9 +91,9 @@ Some values that are vital aspects in our project include, but are not limited t
 
 This question is important to us since being college students ourselves, we recognize that not everyone has the opportunity to do the same, and we want to bring light and attention as to what that difference is.
 
-#### 2) Which factors/demographics in particular have the greatest impact on the level of education a person receives?
+#### 2) Has the level of education for the American public changed over the last couple decades?
 
-It is important to know which factors are the most significant, because institutions, politicians, and the general public can prioritize them when they consider how to make higher education more equitable.
+It is important to know which directions that the current trend for education is goin, which areas have improved, and which ones have not, so that we can see where to focus our energy and make the most impactful changes.
 
 #### 3) How does one’s level of education received connect to their socioeconomic status?
 
