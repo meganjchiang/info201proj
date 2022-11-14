@@ -29,12 +29,15 @@ source("../source/first_chart.R")
 source("../source/second_chart.R")
 ```
 
+### Chart 3
+
 ```{r, echo = FALSE}
 # Chart 3
 source("../source/third_chart.R")
+edu_unemp_chart
 ```
 
-
+We included this chart to see the relationship between the adults who has a college degree and the unemployment rate for people living in different parts of America as we hoped that it will help us understand how education affects employment for different demographics in America. While the data does not provide a strong proof to the two variables having a direct relationship, we discovered that areas with the most adults having a Bachelor's degree is cities, followed by suburbs, towns, then rural areas. One possibility for this trend is that because more jobs in cities are more technical and require a college degree than those in more rural places.
 
 ## What is this file for?
 
