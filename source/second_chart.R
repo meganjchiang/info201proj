@@ -43,12 +43,17 @@ education_data$`Highest Level of Education` <- factor(
 
 # "lengthen" the data so it's easier to graph
 education_data <- education_data %>% 
-  pivot_longer("1995":"2015", names_to = "Year", values_to = "Proportion")
+  pivot_longer("1995":"2015", names_to = "Year", values_to = "Number of Adults")
 
 # create plot (stacked bar chart with proportions)
 education_change_plot <- education_data %>% 
-  ggplot(aes(x = Year, y = Proportion, fill = `Highest Level of Education`)) +
-  geom_col(position = "fill") +
+  ggplot(aes(x = Year, y = `Number of Adults`, 
+             group = `Highest Level of Education`, 
+             color =`Highest Level of Education`)) +
+  geom_line() + 
+  geom_point() +
+  scale_color_brewer(palette = "Set2") +
+  theme_minimal() +
   labs(title = "Highest Level of Education in 1995, 2005, and 2015")
 
 # plot
