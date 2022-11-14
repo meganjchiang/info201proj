@@ -7,9 +7,10 @@ countyData <- read.csv("https://raw.githubusercontent.com/info201b-au2022/projec
 
 #HE attainment changes across 2 decades
 HEattainmentAcrossTwoDecades <- span %>%
-  select(1:4, 9:10) %>%
+  select(1:4, 8:10) %>%
+  group_by(Year) %>%
   filter(Age_Range == "18_64") %>%
-  mutate(TotalHEattainment = (Bachelor + Advanced)) %>%
+  mutate(TotalHEattainment = (Bachelor + Advanced + Associate)) %>%
   mutate(HEproportion = (TotalHEattainment/Total))
 
 #HEA1970region <- ed %>%
