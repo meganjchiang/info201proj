@@ -184,21 +184,36 @@ Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 202
 Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-training.csv
 
 
-## Appendix A: Questions
+## Appendix A:
 
 Changed & Reworded Research Questions from P01
 
 Added 2 new datasets education.csv & unemployment.csv
 
+### Summary Info
+
 ```{r, echo = FALSE}
 # Summary Info
 source("../source/summary_info.R")
+num_observations <- summary_info$num_observations
+adv_1995 <- summary_info$all_adv_1995
+adv_2005 <- summary_info$all_adv_2005
+adv_2015 <- summary_info$all_adv_2015
+high_col_yr <- summary_info$col_max_year
 ```
+
+One of our dataset includes the highest level of education for different gender and age groups through 2 decades from 1995-2015. The dataset is categorized into `r num_observations` ways. We can see that more people are graduating from college and earned advanced degrees. As only `r adv_1995`% of people had it in 1995, and that number rose to `r adv_2005`% in 2005 and `r adv_2015`% in 2015. Also, the proportion of highest level of education and college graduates also rose through the years, as `r high_col_yr` saw the highest percentage in people who graduated from college.
+
+### Table
 
 ```{r, echo = FALSE}
 # Summary Info Table
 source("../source/table_summary_info.R")
+HEattainmentAcrossTwoDecades
 ```
+
+From the table, we can see that the amount of college graduates steadily rose through time for both males and females. We included the table so that we can visually compare and add to the findings in our summary info. More people have been to college in 2015 compared to 1995, from about 35% to around 40%. The change is not too drastic, but is noticeable enough through time and should help us investigate further into education and demographics further down the line.
+
 ### Chart 1
 
 ```{r, echo = FALSE}
@@ -206,6 +221,8 @@ source("../source/table_summary_info.R")
 source("../source/first_chart.R")
 education_by_gender_plot
 ```
+
+From this chart, we can compare the similarities and differences for the highest level of education based on gender. The dataset isn't all inclusive, as it only included male and female. However, we can still make some observations and discover inequality amongst gender and education. The data shows that more males have the highest levels of educations like Doctorates and professional school. While the proportions for both males and females that has a High School diploma or lower is closer to each other.
 
 ### Chart 2
 
@@ -215,7 +232,7 @@ source("../source/second_chart.R")
 education_change_plot
 ```
 
-We included this chart to sh
+We included this chart to have a better understanding of how people's highest level of education has changed over the last couple of decades. We are able to see some trends on this graph. While the largest proportion of people still only has a High School diploma as their highest level of education, we can see that more and more people are going to and graduating from college, and even earning more advanced degrees.
 
 ### Chart 3
 
@@ -227,45 +244,3 @@ edu_unemp_chart
 
 We included this chart to see the relationship between the adults who has a college degree and the unemployment rate for people living in different parts of America as we hoped that it will help us understand how education affects employment for different demographics in America. While the data does not provide a strong proof to the two variables having a direct relationship, we discovered that areas with the most adults having a Bachelor's degree is cities, followed by suburbs, towns, then rural areas. One possibility for this trend is that because more jobs in cities are more technical and require a college degree than those in more rural places.
 
-## What is this file for?
-
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
-* Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-### Example 1: Source some code and run a function
-```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
-source("../source/data_access.R")
-data_access_test()
-```
-### Example 2: Initialize a variable and then use it
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
-```
-
-> `r msg` Hope you have a good day!! 
-
-## ABOUT THIS FILE: 
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

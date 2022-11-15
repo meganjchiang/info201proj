@@ -12,6 +12,8 @@ In our project, we use the following data files and Application Programming Inte
 |[adult-test.csv](./adult-test.csv) | Relate social factors to income
 |[adult-training.csv](./adult-training.csv) | Relate social factors to income
 |[poverty_status.csv](./poverty_status.csv) | Relate poverty rate and more intersectionality
+| [education.csv](./education.csv) | Data for education in America by county
+| [unemployment.csv](./unemployment.csv) | Data for unemployment rates in America by county
 
 ## Application Programming Interfaces (API) (TODO: Update/delete for your PROJECT)
 
