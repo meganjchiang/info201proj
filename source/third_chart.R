@@ -1,4 +1,5 @@
 # Chart 3: Visualization for Research Question #3
+# How does one’s level of education received relate to their employment status?
 
 library(tidyverse)
 
@@ -15,14 +16,17 @@ data_total <- data_unemploy %>%
 
 # select important variables for chart
 data_2015 <- data_total %>%
-  select(State.x, City.Suburb.Town.Rural, Unemployment_rate_2015, Percent.of.adults.with.a.bachelor.s.degree.or.higher..2015.19)
+  select(State.x, City.Suburb.Town.Rural, Unemployment_rate_2015, 
+         Percent.of.adults.with.a.bachelor.s.degree.or.higher..2015.19)
 
 # group and summarize
 data_sum <- data_2015 %>%
   group_by(City.Suburb.Town.Rural) %>%
   summarize(
     Unemployment_Rate_2015 = mean(Unemployment_rate_2015, na.rm = TRUE),
-    At_Least_Bachelors = mean(Percent.of.adults.with.a.bachelor.s.degree.or.higher..2015.19, na.rm = TRUE)
+    At_Least_Bachelors = mean(
+      Percent.of.adults.with.a.bachelor.s.degree.or.higher..2015.19, 
+      na.rm = TRUE)
   ) %>%
   rename(Area = City.Suburb.Town.Rural)
 data_sum <- data_sum[-1, ]
