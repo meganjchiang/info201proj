@@ -11,7 +11,7 @@ HEattainmentAcrossTwoDecades <- span %>%
   group_by(Year) %>%
   filter(Age_Range == "18_64") %>%
   mutate(TotalHEattainment = (Bachelor + Advanced + Associate)) %>%
-  mutate(HEproportion = (TotalHEattainment/Total))
+  mutate(HEproportion = round(TotalHEattainment / Total, 3))
 
 #HEA1970region <- ed %>%
 #  select(2,9:48) %>%

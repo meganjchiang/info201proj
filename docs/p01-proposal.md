@@ -95,9 +95,9 @@ This question is important to us since being college students ourselves, we reco
 
 It is important to know which directions that the current trend for education is goin, which areas have improved, and which ones have not, so that we can see where to focus our energy and make the most impactful changes.
 
-#### 3) How does one’s level of education received connect to their socioeconomic status?
+#### 3) How does one’s level of education received relate to their employment status?
 
-In our rapidly advancing world, most good-paying jobs require some sort of high level education. However, certain communities may face difficulties with reaching a high level of education, so they could have limited employment opportunities. We want to better understand how this would ultimately affect their socioeconomic status.
+In our rapidly advancing world, most good-paying jobs require some sort of high level education. However, certain communities may face difficulties with reaching a high level of education, so they could have limited employment opportunities. We want to better understand how people's level of education ultimately affect their employment status.
 
 
 ## The Dataset
@@ -118,14 +118,18 @@ This dataset shows us the relative socioeconomic status for people of different 
 
 These datasets contain not just recent census for the whole American population by basic demographics, they also include data for income, poverty rate, and unemployment. An important factor in these datasets is that they contain location, which could further help us identify who are more oppressed. We obtained these datasets from [kaggle](https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data?select=acs2017_county_data.csv).
 
+- [education.csv](../data/education.csv) & [unemployment.csv](../data/unemployment.csv)
+
+These datasets have data for education and unemployment rates sorted by counties in America. It is useful as we can combine the two datasets into one and look at education level vs employment status by locations. These datasets are also from [kaggle](https://www.kaggle.com/datasets/valbauman/student-engagement-online-learning-supplement?select=education.csv).
+
 _Both [kaggle](https://www.kaggle.com) and the [United States Census Bureau](https://data.census.gov/cedsci/) are trustworthy sources where the data are accurate and have not been altered by outside influence, as other scholars and researchers also obtain all types of data through these domains. All the data collected are from the Census, which is a government agency whose purpose is to collect data to help us understand the nation and the people better._
 
-| Data File Name  | [1995_2015.csv](../data/1995_2015.csv)  | [adult-test.csv](../data/adult-test.csv) | [adult-training.csv](../data/adult-training.csv) | [poverty_status.csv](../data/poverty_status.csv) | [2017_county_data.csv](../data/2017_county_data.csv) | [2015_county_data.csv](../data/2015_county_data.csv) |
-|-----|-----|-----|-----|-----|-----|-----
-| Purpose | Compare the highest levels of education received by different groups of people | Relate social factors to income | Relate social factors to income | Relate poverty rate and more intersectionality | Gain data for recent demography in the U.S. | Gain data for recent demography in the U.S. |
-| # Observations | 45 | 32560 | 16280 | 69 | 3220 | 3220 |
-| # Variables | 10 | 15 | 15 | 7 | 37 | 37 |
-| Citation | Garrard, R. (2017, November 15). U.S. educational attainment [1995-2015]. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/noriuk/us-educational-attainment-19952015?select=1995_2015.csv | Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-test.csv | Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-training.csv | Bureau, U. S. C. (2021). S1701 POVERTY STATUS IN THE PAST 12 MONTHS. Explore census data. Retrieved October 30, 2022, from https://data.census.gov/cedsci/table?tid=ACSST1Y2021.S1701&moe=true | MuonNeutrino. (2019, March 3). US Census Demographic Data. Kaggle. Retrieved October 31, 2022, from https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data?select=acs2017_county_data.csv | MuonNeutrino. (2019, March 3). US Census Demographic Data. Kaggle. Retrieved October 31, 2022, from https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data?select=acs2015_county_data.csv |
+| Data File Name  | [1995_2015.csv](../data/1995_2015.csv)  | [adult-test.csv](../data/adult-test.csv) | [adult-training.csv](../data/adult-training.csv) | [poverty_status.csv](../data/poverty_status.csv) | [2017_county_data.csv](../data/2017_county_data.csv) | [2015_county_data.csv](../data/2015_county_data.csv) | [education.csv](../data/education.csv) | [unemployment.csv](../data/unemployment.csv) |
+|-----|-----|-----|-----|-----|-----|-----|-----|-----
+| Purpose | Compare the highest levels of education received by different groups of people | Relate social factors to income | Relate social factors to income | Relate poverty rate and more intersectionality | Gain data for recent demography in the U.S. | Gain data for recent demography in the U.S. | Data for education in America by county | Data for unemployment rate in America by county |
+| # Observations | 45 | 32560 | 16280 | 69 | 3220 | 3220 | 3283 | 3275 |
+| # Variables | 10 | 15 | 15 | 7 | 37 | 37 | 48 | 93 |
+| Citation | Garrard, R. (2017, November 15). U.S. educational attainment [1995-2015]. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/noriuk/us-educational-attainment-19952015?select=1995_2015.csv | Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-test.csv | Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-training.csv | Bureau, U. S. C. (2021). S1701 POVERTY STATUS IN THE PAST 12 MONTHS. Explore census data. Retrieved October 30, 2022, from https://data.census.gov/cedsci/table?tid=ACSST1Y2021.S1701&moe=true | MuonNeutrino. (2019, March 3). US Census Demographic Data. Kaggle. Retrieved October 31, 2022, from https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data?select=acs2017_county_data.csv | MuonNeutrino. (2019, March 3). US Census Demographic Data. Kaggle. Retrieved October 31, 2022, from https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data?select=acs2015_county_data.csv | Bauman, V. (2021, September 28). USA Unemployment &amp; Education Level. Kaggle. Retrieved November 14, 2022, from https://www.kaggle.com/datasets/valbauman/student-engagement-online-learning-supplement?select=education.csv | Bauman, V. (2021, September 28). USA Unemployment &amp; Education Level. Kaggle. Retrieved November 14, 2022, from https://www.kaggle.com/datasets/valbauman/student-engagement-online-learning-supplement?select=unemployment.csv |
 
 
 
@@ -147,6 +151,10 @@ We would like to thank Professor Hendry and our teaching assistant Shiina for gi
 ## References
 
 Abel, J. R., & Deitz, R. (2021, June 16). Despite rising costs, college is still a good investment. Liberty Street Economics. Retrieved October 30, 2022, from https://libertystreeteconomics.newyorkfed.org/2019/06/despite-rising-costs-college-is-still-a-good-investment/
+
+Bauman, V. (2021, September 28). USA Unemployment & Education Level. Kaggle. Retrieved November 14, 2022, from https://www.kaggle.com/datasets/valbauman/student-engagement-online-learning-supplement?select=education.csv
+
+Bauman, V. (2021, September 28). USA Unemployment & Education Level. Kaggle. Retrieved November 14, 2022, from https://www.kaggle.com/datasets/valbauman/student-engagement-online-learning-supplement?select=unemployment.csv
 
 Bureau, U. S. C. (2021). S1701 POVERTY STATUS IN THE PAST 12 MONTHS. Explore census data. Retrieved October 30, 2022, from https://data.census.gov/cedsci/table?tid=ACSST1Y2021.S1701&moe=true
 

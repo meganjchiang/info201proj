@@ -15,6 +15,18 @@ adult_training <- adult_training %>%
 # combine two datasets
 adult_data <- rbind(adult_test, adult_training)
 
+# combine some groups
+adult_data$education[adult_data$education == " 1st-4th" | 
+                       adult_data$education == " 5th-6th" | 
+                       adult_data$education == " 7th-8th" |
+                       adult_data$education == " Preschool"] <- " No HS"
+adult_data$education[adult_data$education == " 9th" | 
+                       adult_data$education == " 10th" | 
+                       adult_data$education == " 11th" |
+                       adult_data$education == " 12th"] <- " Some HS"
+adult_data$education[adult_data$education == " Assoc-acdm" | 
+                       adult_data$education == " Assoc-voc"] <- " Associate"
+
 # create plot (bar chart of education by race)
 education_by_race_plot <- adult_data %>% 
   ggplot(aes(x = race, fill = education)) +
@@ -31,9 +43,12 @@ education_by_gender_plot <- adult_data %>%
        x = "Gender",
        y = "Proportion")
 
+# install.packages("gridExtra")
+library("gridExtra")
+
 # print the two plots side-by-side
 race_and_gender_plot <- grid.arrange(education_by_race_plot, 
                                      education_by_gender_plot, ncol=2)
 
 # combined plot
-race_and_gender_plot
+# race_and_gender_plot
