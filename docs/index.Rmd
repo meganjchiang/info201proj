@@ -190,6 +190,8 @@ Changed & Reworded Research Questions from P01
 
 Added 2 new datasets education.csv & unemployment.csv
 
+Late commit to make table look better (talked to Shiina for permission)
+
 ### Summary Info
 
 ```{r, echo = FALSE}
