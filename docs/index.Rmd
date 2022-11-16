@@ -209,7 +209,7 @@ One of our dataset includes the highest level of education for different gender 
 ```{r, echo = FALSE}
 # Summary Info Table
 source("../source/table_summary_info.R")
-HEattainmentAcrossTwoDecades
+HEtable
 ```
 
 From the table, we can see that the amount of college graduates steadily rose through time for both males and females. We included the table so that we can visually compare and add to the findings in our summary info. More people have been to college in 2015 compared to 1995, from about 35% to around 40%. The change is not too drastic, but is noticeable enough through time and should help us investigate further into education and demographics further down the line.

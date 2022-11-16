@@ -14,6 +14,7 @@ HEattainmentAcrossTwoDecades <- span %>%
   mutate(CGprop = round(CollegeGrad / Total, 3)) %>%
   select(1:3, 8:9)
 
+HEtable <- knitr::kable(HEattainmentAcrossTwoDecades, caption = "Proportions of College Graduates")
 
 #HEA1970region <- ed %>%
 #  select(2,9:48) %>%
