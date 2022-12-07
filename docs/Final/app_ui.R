@@ -34,7 +34,7 @@ ui <- navbarPage(
   footer = list(
     tags$style(type = "text/css", "body {padding-top: 70px;}"),
     hr(),
-    HTML("... Project Footer ... "),
+    HTML("INFO 201: Foundational Skills for Data Science | Autumn 2022 | Jacob Hilse, Megan Chiang, Vincent Kao, Xuan Yi"),
     hr()
   ),
 

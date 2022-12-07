@@ -9,8 +9,8 @@ tab_panel_chart1 <-tabPanel(
     checkboxGroupInput(
       inputId = "genders",
       label = h3("Select Gender(s)"),
-      choices = list(" Male", " Female"),
-      selected = list(" Male", " Female")
+      choices = list("Male", "Female"),
+      selected = list("Male", "Female")
     )
   ),
   mainPanel(
