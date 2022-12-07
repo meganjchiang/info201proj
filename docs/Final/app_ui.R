@@ -22,6 +22,14 @@ ui <- navbarPage(
   title = "Education & Social Status in the United States",
   position = "fixed-top",
 
+  # A simple header
+  header = list(
+    tags$style(type = "text/css", "body {padding-top: 70px;}"),
+    hr(),
+    HTML(""),
+    hr()
+  ),
+
   # A simple footer
   footer = list(
     tags$style(type = "text/css", "body {padding-top: 70px;}"),
