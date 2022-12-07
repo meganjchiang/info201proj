@@ -11,7 +11,63 @@ library(shiny)
 library(tidyverse)
 library(plotly)
 
+# chart 1 code
+# import two adult datasets
+adult_test <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-meganjchiang/main/data/adult-test.csv")
+adult_training <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-meganjchiang/main/data/adult-training.csv")
 
+# select desired columns (for both datasets)
+adult_test <- adult_test %>%
+  select(age, education, occupation, gender, income)
+adult_training <- adult_training %>%
+  select(age, education, occupation, gender, income)
+# combine two datasets
+adult_data <- rbind(adult_test, adult_training)
+
+# combine some groups
+adult_data$education[adult_data$education == " 1st-4th" | 
+                       adult_data$education == " 5th-6th" | 
+                       adult_data$education == " 7th-8th" |
+                       adult_data$education == " Preschool"] <- " No HS"
+adult_data$education[adult_data$education == " 9th" | 
+                       adult_data$education == " 10th" | 
+                       adult_data$education == " 11th" |
+                       adult_data$education == " 12th"] <- " Some HS"
+adult_data$education[adult_data$education == " Assoc-acdm" | 
+                       adult_data$education == " Assoc-voc"] <- " Associate"
+
+adult_data <- adult_data %>%
+  rename(Education = education)
+
+# adult_data <- adult_data %>%
+#  filter(gender %in% input$gender)
+
+# education_by_gender_plot <- plot_ly(adult_data, x = ~gender, color = ~education,
+#                                    type = 'bar') 
+
+build_chart1 <- function(genders) {
+  education_by_gender_plot <- adult_data %>%
+    filter(gender == c(genders)) %>%
+    ggplot(aes(x = gender, fill = Education)) +
+    geom_bar(position="fill") +
+    labs(title = "Highest Level of Education By Gender",
+         x = "Gender",
+         y = "Proportion")
+  
+  return(ggplotly(education_by_gender_plot))
+}
+
+# education_by_gender_plot <- adult_data %>%
+#   ggplot(aes(x = gender, fill = Education)) +
+#   geom_bar(position="fill") +
+#   labs(title = "Highest Level of Education By Gender",
+#        x = "Gender",
+#        y = "Proportion")
+
+# education_by_gender_plot <- ggplotly(education_by_gender_plot)
+
+# plot
+#return(education_by_gender_plot)
 
 ###############################################################################
 
@@ -66,23 +122,38 @@ education_data <- education_data %>%
   mutate("Proportion of Adults" = round(
     `Number of Adults` / sum(`Number of Adults`), 3))
 
-build_chart2 <- function(year1, year2) {
+# build_chart2 <- function(year1, year2) {
+#   
+#   education_data_for_plot <- education_data %>%
+#     filter(Year == year1 | Year == year2)
+# 
+#   education_stack_bar <- ggplot(data = education_data_for_plot) +
+#     geom_bar(
+#       mapping = aes(
+#         fill = `Highest Level of Education`,
+#         x = c(education_data_for_plot$Year),
+#         y = `Proportion of Adults`
+#       ),
+#       #position = "stack",
+#       stat = "identity",
+#       width = 0.3
+#     )
+#   return(ggplotly(education_stack_bar))
+# }
+
+build_chart2 <- function(year) {
   
   education_data_for_plot <- education_data %>%
-    filter(Year == year1 | Year == year2)
-
-  education_stack_bar <- ggplot(data = education_data_for_plot) +
-    geom_bar(
-      mapping = aes(
-        fill = `Highest Level of Education`,
-        x = c(education_data_for_plot$Year),
-        y = `Proportion of Adults`
-      ),
-      position = "stack",
-      stat = "identity",
-      width = 0.3
-    )
-  return(ggplotly(education_stack_bar))
+    filter(Year == year)
+  
+  education_pie <- plot_ly(
+    education_data_for_plot,
+    labels = ~ `Highest Level of Education`,
+    values = ~ `Proportion of Adults`,
+    type = "pie"
+  )
+  
+  return(education_pie)
 }
 
 ###############################################################################
@@ -172,9 +243,18 @@ build_chart3 <- function(year, type) {
 server <- function(input, output) {
     # TBD
   
-  output$chart2 <- renderPlotly({
-    return(build_chart2(input$c2y1, input$c2y2))
+  # chart 1
+  output$firstchart <- renderPlotly({  
+    return(build_chart1(input$genders))
   })
+  
+  # output$chart2 <- renderPlotly({
+  #   return(build_chart2(input$c2y1, input$c2y2))
+  # })
+  
+  output$chart2 <- renderPlotly(
+    return(build_chart2(input$c2year))
+  )
   
   output$chart3 <- renderPlotly({
     return(build_chart3(input$c3year, input$c3type))

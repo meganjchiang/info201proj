@@ -24,6 +24,16 @@ chart2_sidebar_content <- sidebarPanel(
       2005,
       2015),
     selected = 2015
+  ),
+  
+  selectInput(
+    "c2year",
+    label = h4("Select Year"),
+    choices = list(
+      1995,
+      2005,
+      2015),
+    selected = 2015
   )
 )
 
