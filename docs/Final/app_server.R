@@ -27,9 +27,7 @@ adult_data$education[adult_data$education == " 9th" |
                        adult_data$education == " 12th"] <- " Some HS"
 adult_data$education[adult_data$education == " Assoc-acdm" | 
                        adult_data$education == " Assoc-voc"] <- " Associate"
-# 
-# adult_data <- adult_data %>%
-#   rename(Education = education)
+
 
 adult_data <- adult_data %>%
   filter(education == " Doctorate" |
@@ -269,7 +267,8 @@ build_chart3 <- function(year, type) {
       title = paste0(type, " in America in ", year, " for Different Areas"),
       x = "Area",
       y = type
-    )
+    ) +
+    scale_y_continuous(limits = c(0, 30))
   return(ggplotly(chart3_group_bar))
 }
 
@@ -283,9 +282,6 @@ server <- function(input, output) {
     return(build_chart1(input$genders))
   })
   
-  # output$chart2 <- renderPlotly({
-  #   return(build_chart2(input$c2y1, input$c2y2))
-  # })
   
   output$chart2 <- renderPlotly(
     return(build_chart2(input$c2year))
