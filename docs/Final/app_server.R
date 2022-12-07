@@ -27,19 +27,59 @@ adult_data$education[adult_data$education == " 9th" |
                        adult_data$education == " 12th"] <- " Some HS"
 adult_data$education[adult_data$education == " Assoc-acdm" | 
                        adult_data$education == " Assoc-voc"] <- " Associate"
+# 
+# adult_data <- adult_data %>%
+#   rename(Education = education)
 
 adult_data <- adult_data %>%
+  filter(education == " Doctorate" |
+           education == " Prof-school" |
+           education == " Bachelors" |
+           education == " Associate" |
+           education == " Some-college" |
+           education == " HS-grad" |
+           education == " Some HS" |
+           education == " No HS") %>%
   rename(Education = education)
 
-# adult_data <- adult_data %>%
-#  filter(gender %in% input$gender)
-
-# education_by_gender_plot <- plot_ly(adult_data, x = ~gender, color = ~education,
-#                                    type = 'bar') 
+adult_data$Education <- factor(adult_data$Education, levels = c(
+   " Doctorate",
+   " Prof-school",
+   " Bachelors",
+   " Associate",
+   " Some-college",
+   " HS-grad",
+   " Some HS",
+   " No HS"
+)) 
 
 build_chart1 <- function(genders) {
+  
+  
   education_by_gender_plot <- adult_data %>%
     filter(gender == c(genders)) %>%
+    # mutate(
+    #   if (Education == " Doctorate") {
+    #     sort = 1
+    #   } else if (Education == " Masters") {
+    #     sort = 2
+    #   } else if (Education == " Prof-school") {
+    #     sort = 3
+    #   } else if (Education == " Bachelors") {
+    #     sort = 4
+    #   } else if (Education == " Associate") {
+    #     sort = 5
+    #   } else if (Education == " Some-college") {
+    #     sort = 6
+    #   } else if (Education == " HS-grad") {
+    #     sort = 7
+    #   } else if (Education == " Some HS") {
+    #     sort = 8
+    #   } else if (Education == " No HS") {
+    #     sort = 9
+    #   }
+    # ) %>%
+    # arrange(sort) %>%
     ggplot(aes(x = gender, fill = Education)) +
     geom_bar(position="fill") +
     labs(title = "Highest Level of Education By Gender",
@@ -112,7 +152,8 @@ education_data <- education_data %>%
                values_to = "Number of Adults") %>%
   group_by(Year) %>%
   mutate("Proportion of Adults" = round(
-    `Number of Adults` / sum(`Number of Adults`), 3))
+    `Number of Adults` / sum(`Number of Adults`), 3)) %>%
+  arrange(`Highest Level of Education`)
 
 # build_chart2 <- function(year1, year2) {
 #   
@@ -136,13 +177,15 @@ education_data <- education_data %>%
 build_chart2 <- function(year) {
   
   education_data_for_plot <- education_data %>%
-    filter(Year == year)
+    filter(Year == year) 
   
   education_pie <- plot_ly(
     education_data_for_plot,
     labels = ~ `Highest Level of Education`,
     values = ~ `Proportion of Adults`,
-    type = "pie"
+    type = "pie",
+    sort = FALSE,
+    direction = "clockwise"
   )
   
   return(education_pie)
