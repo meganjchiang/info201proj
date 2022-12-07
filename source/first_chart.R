@@ -47,10 +47,10 @@ education_by_gender_plot <- adult_data %>%
 education_by_gender_plot
 
 # install.packages("gridExtra")
-#library("gridExtra")
+# library("gridExtra")
 
 # print the two plots side-by-side
-#race_and_gender_plot <- grid.arrange(education_by_race_plot, 
+# race_and_gender_plot <- grid.arrange(education_by_race_plot, 
 #                                     education_by_gender_plot, ncol=2)
 
 # combined plot

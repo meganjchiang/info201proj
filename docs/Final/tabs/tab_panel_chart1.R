@@ -12,35 +12,9 @@ tab_panel_chart1 <-tabPanel(
       choices = list(" Male", " Female"),
       selected = list(" Male", " Female")
     )
-    # checkboxGroupInput(
-    #   "c1levels",
-    #   label = h4("Choose Level of Education"),
-    #   choices = list(
-    #     " Associate",
-    #     " Bachelors",
-    #     " Doctorate",
-    #     " HS-grad",
-    #     " Masters",
-    #     " No HS",
-    #     " Prof-School",
-    #     " Some-college",
-    #     " Some HS"
-    #   ),
-    #   selected = list(
-    #     " Associate",
-    #     " Bachelors",
-    #     " Doctorate",
-    #     " HS-grad",
-    #     " Masters",
-    #     " No HS",
-    #     " Prof-School",
-    #     " Some-college",
-    #     " Some HS"
-    #   )
-    # )
   ),
   mainPanel(
     plotlyOutput(outputId = "firstchart")
   )
-)
 
+)
