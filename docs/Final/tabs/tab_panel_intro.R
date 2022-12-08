@@ -5,7 +5,7 @@ library(shiny)
 intro_text <- fluidPage(
   strong(h3("Overview")),
     p("Our project is centered around the highest levels of education for adults in the United States. We wanted to investigate  the distribution of these levels depending on a certain demographic (e.g., gender), the change in the distribution over time, and the relationship between a person's highest level of education and their employment status."),
-    img(src='intro-graphic.png', align = "center", style = "display: block; margin-left: auto; margin-right: auto; width: 400px"),
+    img(src='intro-graphic.png', align = "right", style = "display: block; margin-left: auto; margin-right: auto; width: 400px"),
   br(),
   strong(h3("Research questions")),
   p("Using these objectives, we formed ", strong("three questions"), " that guided our research:"),
