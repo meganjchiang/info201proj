@@ -13,8 +13,7 @@ tab_panel_summary <-tabPanel(
       href="https://data-feminism.mitpress.mit.edu/",
       tags$img(src="dataFeminism.png",
                title="Data Feminism",
-               width="550",
-               height="619")
+               style = "width: 400px")
     ),
     br(),
     p("This isn't to say that we should feel overwhelmed by enormous number of elements at play. Rather, we should continue to use data to our advantage. Relating to ideas presented in", em("Data Feminism"), "we should actively try to take steps that solve this issue. This means using data to isolate and identify where these issues are coming from. To actually incorporate change, we need to confront these issues and actively try to solve them or shift the perspectives of those that have jurisdiction over these issues. By choosing to take functional steps to solve these issues, we are shifting our impact from the digital world to reality.")
