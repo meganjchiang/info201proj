@@ -31,5 +31,6 @@ tab_panel_chart2 <-tabPanel(
     p("How has American's level of education changed over the last couple of
       decades? This interactive chart shows the percentages of highest level
       of education of the American population for the years 1995, 2005, and 2015.
+      Over time, a larger proportion of people received higher levels of education.
       ")
 )
