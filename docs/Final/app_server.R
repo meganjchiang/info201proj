@@ -275,12 +275,6 @@ build_chart3 <- function(year, type) {
 ###############################################################################
 
 server <- function(input, output) {
-   
-  # intro paragraph
-  output$intro <- renderText({
-    intro <- paste0("Introduction paragraph goes here.")
-    intro
-  })
   
   # chart 1
   output$firstchart <- renderPlotly({  
