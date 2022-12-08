@@ -1,10 +1,8 @@
 # tab_panel_chart2
 
 library(shiny)
-library(tidyverse)
-library(plotly)
 
-
+# choose year
 chart2_sidebar_content <- sidebarPanel(
   selectInput(
     "c2year",
@@ -17,11 +15,12 @@ chart2_sidebar_content <- sidebarPanel(
   )
 )
 
+# chart
 chart2_main_content <- mainPanel(
   plotlyOutput("chart2")
 )
 
-
+# tab panel
 tab_panel_chart2 <-tabPanel(
     "Chart 2",
     titlePanel(h1("American Highest Level of Education by Year")),
@@ -29,6 +28,8 @@ tab_panel_chart2 <-tabPanel(
       chart2_sidebar_content,
       chart2_main_content
     ),
-    HTML("This is chart 2"),
-    p("This is chart 2.")
+    p("How has American's level of education changed over the last couple of
+      decades? This interactive chart shows the percentages of highest level
+      of education of the American population for the years 1995, 2005, and 2015.
+      ")
 )

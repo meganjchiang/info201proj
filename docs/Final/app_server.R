@@ -56,48 +56,14 @@ build_chart1 <- function(genders) {
   
   education_by_gender_plot <- adult_data %>%
     filter(gender == c(genders)) %>%
-    # mutate(
-    #   if (Education == " Doctorate") {
-    #     sort = 1
-    #   } else if (Education == " Masters") {
-    #     sort = 2
-    #   } else if (Education == " Prof-school") {
-    #     sort = 3
-    #   } else if (Education == " Bachelors") {
-    #     sort = 4
-    #   } else if (Education == " Associate") {
-    #     sort = 5
-    #   } else if (Education == " Some-college") {
-    #     sort = 6
-    #   } else if (Education == " HS-grad") {
-    #     sort = 7
-    #   } else if (Education == " Some HS") {
-    #     sort = 8
-    #   } else if (Education == " No HS") {
-    #     sort = 9
-    #   }
-    # ) %>%
-    # arrange(sort) %>%
     ggplot(aes(x = gender, fill = Education)) +
-    geom_bar(position="fill") +
+    geom_bar(position="fill", width = 0.3) +
     labs(title = "Highest Level of Education By Gender",
          x = "Gender",
          y = "Proportion")
   
   return(ggplotly(education_by_gender_plot))
 }
-
-# education_by_gender_plot <- adult_data %>%
-#   ggplot(aes(x = gender, fill = Education)) +
-#   geom_bar(position="fill") +
-#   labs(title = "Highest Level of Education By Gender",
-#        x = "Gender",
-#        y = "Proportion")
-
-# education_by_gender_plot <- ggplotly(education_by_gender_plot)
-
-# plot
-#return(education_by_gender_plot)
 
 ###############################################################################
 
@@ -153,25 +119,7 @@ education_data <- education_data %>%
     `Number of Adults` / sum(`Number of Adults`), 3)) %>%
   arrange(`Highest Level of Education`)
 
-# build_chart2 <- function(year1, year2) {
-#   
-#   education_data_for_plot <- education_data %>%
-#     filter(Year == year1 | Year == year2)
-# 
-#   education_stack_bar <- ggplot(data = education_data_for_plot) +
-#     geom_bar(
-#       mapping = aes(
-#         fill = `Highest Level of Education`,
-#         x = c(education_data_for_plot$Year),
-#         y = `Proportion of Adults`
-#       ),
-#       #position = "stack",
-#       stat = "identity",
-#       width = 0.3
-#     )
-#   return(ggplotly(education_stack_bar))
-# }
-
+# function to build chart 2
 build_chart2 <- function(year) {
   
   education_data_for_plot <- education_data %>%
@@ -183,8 +131,14 @@ build_chart2 <- function(year) {
     values = ~ `Proportion of Adults`,
     type = "pie",
     sort = FALSE,
-    direction = "clockwise"
-  )
+    direction = "clockwise",
+    textinfo = "label+percent",
+    textposition = "inside",
+    insidetextorientation = "radial"
+  ) %>%
+    layout(
+      title = paste0("American Highest Level of Education in ", year)
+    )
   
   return(education_pie)
 }
@@ -237,13 +191,13 @@ build_chart3 <- function(year, type) {
   if (year == 2000){
     data_sum_for_plot <- data_sum %>%
       select("Area", "Unemployment_Rate_2000", "At_Least_Bachelors_2000") %>%
-      rename(`Unemployment Rate` = Unemployment_Rate_2000) %>%
+      rename(`Unemployment Percentage` = Unemployment_Rate_2000) %>%
       rename(`Percent of Adults with At Least Bachelor's Degree` = At_Least_Bachelors_2000)
   }
   if (year == 2015){
     data_sum_for_plot <- data_sum %>%
       select("Area", "Unemployment_Rate_2015", "At_Least_Bachelors_2015") %>%
-      rename(`Unemployment Rate` = Unemployment_Rate_2015) %>%
+      rename(`Unemployment Percentage` = Unemployment_Rate_2015) %>%
       rename(`Percent of Adults with At Least Bachelor's Degree` = At_Least_Bachelors_2015)
   }
   
@@ -251,8 +205,8 @@ build_chart3 <- function(year, type) {
     geom_bar(
       mapping = aes(
         x = `Area`,
-        if (type == "Unemployment Rate") {
-          y = `Unemployment Rate`
+        if (type == "Unemployment Percentage") {
+          y = `Unemployment Percentage`
         } else {
           y = `Percent of Adults with At Least Bachelor's Degree`
         }
@@ -287,11 +241,12 @@ server <- function(input, output) {
     return(build_chart1(input$genders))
   })
   
-  
+  # chart 2
   output$chart2 <- renderPlotly(
     return(build_chart2(input$c2year))
   )
   
+  # chart 3
   output$chart3 <- renderPlotly({
     return(build_chart3(input$c3year, input$c3type))
   })

@@ -19,6 +19,9 @@ source("tabs/tab_panel_report.R")
 
 
 ui <- navbarPage(
+  
+  includeCSS("www/styles.css"),
+  
   title = "Education & Social Status in the United States",
   position = "fixed-top",
 
