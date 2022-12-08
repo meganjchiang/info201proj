@@ -27,6 +27,7 @@ tab_panel_chart1 <-tabPanel(
     For the relatively lower levels (completion of high school and below), 
     the male and female proportions are similar."),
   p("It should be noted that this bar chart is not completely inclusive; 
-    the dataset did not provide any data for people with other gender identities.")
+    the dataset did not provide any data for people with other gender 
+    identities.")
 )
 
