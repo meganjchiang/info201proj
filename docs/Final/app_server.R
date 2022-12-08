@@ -231,7 +231,7 @@ build_chart3 <- function(year, type) {
 server <- function(input, output) {
   
   # chart 1
-  output$firstchart <- renderPlotly({  
+  output$chart1 <- renderPlotly({  
     return(build_chart1(input$genders))
   })
   
