@@ -1,12 +1,3 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-
 library(shiny)
 library(plotly)
 
@@ -27,14 +18,6 @@ ui <- navbarPage(
 
   br(),
   
-  # A simple header
-  # header = list(
-  #  tags$style(type = "text/css", "body {padding-top: 70px;}"),
-  #  hr(),
-  #  HTML(""),
-  #  hr()
-  # ),
-
   # A simple footer
   footer = list(
     tags$style(type = "text/css", "body {padding-top: 70px; padding-left: 10px}"),

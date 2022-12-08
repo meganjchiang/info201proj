@@ -2,8 +2,12 @@ library(shiny)
 library(tidyverse)
 library(plotly)
 
+###############################################################################
 
-# chart 1 code
+# Chart 1: Visualization for Research Question #1 
+# Do the differences in demographics affect the highest level of 
+# education that people receive in America?
+
 # import two adult datasets
 adult_test <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-meganjchiang/main/data/adult-test.csv")
 adult_training <- read.csv("https://raw.githubusercontent.com/info201b-au2022/project-meganjchiang/main/data/adult-training.csv")
