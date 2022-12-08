@@ -1,4 +1,4 @@
-## Education & Social Status in the United States: Project Proposal
+## Education & Social Status in the United States
 ## Code name: People Learning
 Jacob Hilse (jhilse@uw.edu)         
 Megan Chiang (mjchiang@uw.edu)     
