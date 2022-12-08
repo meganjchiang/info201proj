@@ -26,14 +26,6 @@ ui <- navbarPage(
   position = "fixed-top",
 
   br(),
-  
-  # A simple header
-  # header = list(
-  #  tags$style(type = "text/css", "body {padding-top: 70px;}"),
-  #  hr(),
-  #  HTML(""),
-  #  hr()
-  # ),
 
   # A simple footer
   footer = list(
