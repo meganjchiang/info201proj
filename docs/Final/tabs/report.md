@@ -25,7 +25,7 @@ Xuan Yi (xuany3@uw.edu)
 
 According to the [United Census Bureau](https://www.census.gov/newsroom/press-releases/2022/educational-attainment.html), the highest level of education for people in America has increased in recent history, as shown by this graphic.
 
-![Bachelor Higher Graph](educational-attainment-2022.webp)
+![Bachelor Higher Graph](../../educational-attainment-2022.webp)
 
 With that being said, while the entire population are receiving more education on average, this statistic does not show the disparity between different groups of people. We wanted to look into how severe this inequality is and how it affects different demographics in this project by working with data that will help us explore the correlations between different people, their levels of education received, and their social status. We hope to use the data that we find to teach people who are oblivious to this situation and to help those who do not have as many opportunities as the others.
 
@@ -85,44 +85,44 @@ In our rapidly advancing world, most good-paying jobs require some sort of high 
 ## Findings
 Our findings was that the differences in demographics do affect the highest level of education that people receive in America. The differences in demographics will have affect on education level of people because cultural backgrounds.
 
-The level of education for the American public raised over the last couple decades. The reason behind it is because the education level in general has been rising, more and more peoplpe are getting at least a bachelor degree. Which means more and more people have to earn an advanced degree in order to be competitive when looking for jobs.
+The level of education for the American public raised over the last couple decades. The reason behind it is because the education level in general has been rising, more and more people are getting at least a bachelor degree. Which means more and more people have to earn an advanced degree in order to be competitive when looking for jobs.
 
-The higher level of education people get, the better their emplooment status wil be. As our assumption, most good-paying jobs require some sort of high level education.
+The higher level of education people get, the better their employment status will be. As our assumption, most good-paying jobs require some sort of high level education.
 
 
 ## Discussion
-The importance oof our finding is that the rich will stay rich. The ones who have a higher social status will be more likely to remain their status. The entire employment and education level is not much but a cycle. If you are getting a high level of education, you are more likely to get a good job and you are more likely to raise your kid with a high level of education. Opporutnites are limited within the resources we have in the U.S. If one's keeping the "spot" of getting a high level of education, there will be someone losing the "spot."
+The importance oof our finding is that the rich will stay rich. The ones who have a higher social status will be more likely to remain their status. The entire employment and education level is not much but a cycle. If you are getting a high level of education, you are more likely to get a good job and you are more likely to raise your kid with a high level of education. Opportunities are limited within the resources we have in the U.S. If one's keeping the "spot" of getting a high level of education, there will be someone losing the "spot."
 
 
 ## Conclusion
-The Education & Social Status in the United States is the best way to represent the privilege hazard in the U.S. The one of the main topics of our course about the one who's in power suppress the ones who are not. The chances of getting a certain level of education is eventually rising in the U.S. But the spots for having a high social status is limited. As we dicussesed, the highest level of educatioon has been rising in the U.S. But that does not mean more people are having a higher social status. The way to determine wether people are having privilege is by comparing to other people. If we are having more and more bachelor degrees, the value of it actually decreases. We will be having more people reach more advanced degrees to find a high-earning job. The problem cannot be solved from having more peopple with higher level of education. The way to actually solved it is to make sure people are having same chances of getting base level of education so they can reach higher and get out of the endless cycle of high level education - social status.
+The Education & Social Status in the United States is the best way to represent the privilege hazard in the U.S. The one of the main topics of our course about the one who's in power suppress the ones who are not. The chances of getting a certain level of education is eventually rising in the U.S. But the spots for having a high social status is limited. As we discussed, the highest level of education has been rising in the U.S. But that does not mean more people are having a higher social status. The way to determine whether people are having privilege is by comparing to other people. If we are having more and more bachelor degrees, the value of it actually decreases. We will be having more people reach more advanced degrees to find a high-earning job. The problem cannot be solved from having more people with higher level of education. The way to actually solved it is to make sure people are having same chances of getting base level of education so they can reach higher and get out of the endless cycle of high level education - social status.
 
 
 ## The Dataset
 
- - [1995_2015.csv](../data/1995_2015.csv)
+ - [1995_2015.csv](../../../data/1995_2015.csv)
 
 This dataset allows us to look into the level of education for people grouped by their age range, and sex and can help us look into how the intersectionality have an impact on people’s level of education and whether age, sex, or a combination of both have a bigger effect. The dataset comes from the United States Census Bureau for Education Attainment from the years 1995, 2005, and 2015 respectively. We obtained the data from [kaggle](https://www.kaggle.com/datasets/noriuk/us-educational-attainment-19952015).
 
-- [adult-test.csv](../data/adult-test.csv) & [adult-training.csv](../data/adult-training.csv)
+- [adult-test.csv](../../../data/adult-test.csv) & [adult-training.csv](../../../data/adult-training.csv)
 
 These datasets help us answer our research questions and evaluate the intersectionality between level of education, race, sex, and income with various variables for which we can investigate their relationships with one another. These datasets also came from the United States Census and we obtained them from [kaggle](https://www.kaggle.com/datasets/johnolafenwa/us-census-data). It can also be obtained from another credible source: [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/census+income).
 
-- [poverty_status.csv](../data/poverty_status.csv)
+- [poverty_status.csv](../../../data/poverty_status.csv)
 
 This dataset shows us the relative socioeconomic status for people of different identities by whether they are above or below the poverty level. This further helps us understand which groups of people are more likely to be negatively impacted by their social status and lack of education, and it also includes more specific data including work experience and employment status as well as a margin of error. We obtained this dataset straight from the [United States Census Bureau](https://data.census.gov/cedsci/table?tid=ACSST1Y2021.S1701&moe=true)
 
-- [2015_county_data.csv](../data/2015_county_data.csv) & [2017_county_data.csv](../data/2017_county_data.csv)
+- [2015_county_data.csv](../../../data/2015_county_data.csv) & [2017_county_data.csv](../../../data/2017_county_data.csv)
 
 These datasets contain not just recent census for the whole American population by basic demographics, they also include data for income, poverty rate, and unemployment. An important factor in these datasets is that they contain location, which could further help us identify who are more oppressed. We obtained these datasets from [kaggle](https://www.kaggle.com/datasets/muonneutrino/us-census-demographic-data?select=acs2017_county_data.csv).
 
-- [education.csv](../data/education.csv) & [unemployment.csv](../data/unemployment.csv)
+- [education.csv](../../../data/education.csv) & [unemployment.csv](../../../data/unemployment.csv)
 
 These datasets have data for education and unemployment rates sorted by counties in America. It is useful as we can combine the two datasets into one and look at education level vs employment status by locations. These datasets are also from [kaggle](https://www.kaggle.com/datasets/valbauman/student-engagement-online-learning-supplement?select=education.csv).
 
 _Both [kaggle](https://www.kaggle.com) and the [United States Census Bureau](https://data.census.gov/cedsci/) are trustworthy sources where the data are accurate and have not been altered by outside influence, as other scholars and researchers also obtain all types of data through these domains. All the data collected are from the Census, which is a government agency whose purpose is to collect data to help us understand the nation and the people better._
 
-| Data File Name  | [1995_2015.csv](../data/1995_2015.csv)  | [adult-test.csv](../data/adult-test.csv) | [adult-training.csv](../data/adult-training.csv) | [poverty_status.csv](../data/poverty_status.csv) | [2017_county_data.csv](../data/2017_county_data.csv) | [2015_county_data.csv](../data/2015_county_data.csv) | [education.csv](../data/education.csv) | [unemployment.csv](../data/unemployment.csv) |
+| Data File Name  | [1995_2015.csv](../../../data/1995_2015.csv)  | [adult-test.csv](../../../data/adult-test.csv) | [adult-training.csv](../../../data/adult-training.csv) | [poverty_status.csv](../../../data/poverty_status.csv) | [2017_county_data.csv](../../../data/2017_county_data.csv) | [2015_county_data.csv](../../../data/2015_county_data.csv) | [education.csv](../../../data/education.csv) | [unemployment.csv](../../../data/unemployment.csv) |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----
 | Purpose | Compare the highest levels of education received by different groups of people | Relate social factors to income | Relate social factors to income | Relate poverty rate and more intersectionality | Gain data for recent demography in the U.S. | Gain data for recent demography in the U.S. | Data for education in America by county | Data for unemployment rate in America by county |
 | # Observations | 45 | 32560 | 16280 | 69 | 3220 | 3220 | 3283 | 3275 |
