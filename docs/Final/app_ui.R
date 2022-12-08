@@ -25,17 +25,19 @@ ui <- navbarPage(
   title = "Education & Social Status in the United States",
   position = "fixed-top",
 
+  br(),
+  
   # A simple header
-  header = list(
-    tags$style(type = "text/css", "body {padding-top: 70px;}"),
-    hr(),
-    HTML(""),
-    hr()
-  ),
+  # header = list(
+  #  tags$style(type = "text/css", "body {padding-top: 70px;}"),
+  #  hr(),
+  #  HTML(""),
+  #  hr()
+  # ),
 
   # A simple footer
   footer = list(
-    tags$style(type = "text/css", "body {padding-top: 70px;}"),
+    tags$style(type = "text/css", "body {padding-top: 70px; padding-left: 10px}"),
     hr(),
     HTML("INFO 201: Foundational Skills for Data Science | Autumn 2022 | Jacob Hilse, Megan Chiang, Vincent Kao, Xuan Yi"),
     hr()
