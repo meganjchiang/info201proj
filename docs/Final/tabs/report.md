@@ -1,5 +1,5 @@
-# Education & Social Status in the United States: Project Proposal
-# Code name: People Learning
+## Education & Social Status in the United States: Project Proposal
+## Code name: People Learning
 Jacob Hilse (jhilse@uw.edu)         
 Megan Chiang (mjchiang@uw.edu)     
 Vincent Kao (hkao79@uw.edu)      
@@ -11,7 +11,7 @@ Xuan Yi (xuany3@uw.edu)
 *Autumn 2022*  
 
 ### Abstract
-(1)We wanted to use this opportunity to investigate the highest level of education that Americans have received based on their demographics. We thought that this is important as one’s level of education received has an influence on their social status, however, the reverse relationship is true as well. 
+(1)We wanted to use this opportunity to investigate the highest level of education that Americans have received based on their demographics. We thought that this is important as one’s level of education received has an influence on their social status, however, the reverse relationship is true as well.
 
 (2)We plan to create visualizations that can clearly demonstrate the differences in the level of education received between different demographic groups.
 
@@ -69,23 +69,23 @@ Some values that are vital aspects in our project include, but are not limited t
 
 ## Research Questions
 
-#### 1) Do the differences in demographics affect the highest level of education that people receive in America?
+##### 1) Do the differences in demographics affect the highest level of education that people receive in America?
 
 This question is important to us since being college students ourselves, we recognize that not everyone has the opportunity to do the same, and we want to bring light and attention as to what that difference is.
 
-#### 2) Has the level of education for the American public changed over the last couple decades?
+##### 2) Has the level of education for the American public changed over the last couple decades?
 
 It is important to know which directions that the current trend for education is goin, which areas have improved, and which ones have not, so that we can see where to focus our energy and make the most impactful changes.
 
-#### 3) How does one’s level of education received relate to their employment status?
+##### 3) How does one’s level of education received relate to their employment status?
 
 In our rapidly advancing world, most good-paying jobs require some sort of high level education. However, certain communities may face difficulties with reaching a high level of education, so they could have limited employment opportunities. We want to better understand how people's level of education ultimately affect their employment status.
 
 
-## Findings 
-Our findings was that the differences in demographics do affect the highest level of education that people receive in America. The differences in demographics will have affect on education level of people because cultural backgrounds. 
+## Findings
+Our findings was that the differences in demographics do affect the highest level of education that people receive in America. The differences in demographics will have affect on education level of people because cultural backgrounds.
 
-The level of education for the American public raised over the last couple decades. The reason behind it is because the education level in general has been rising, more and more peoplpe are getting at least a bachelor degree. Which means more and more people have to earn an advanced degree in order to be competitive when looking for jobs. 
+The level of education for the American public raised over the last couple decades. The reason behind it is because the education level in general has been rising, more and more peoplpe are getting at least a bachelor degree. Which means more and more people have to earn an advanced degree in order to be competitive when looking for jobs.
 
 The higher level of education people get, the better their emplooment status wil be. As our assumption, most good-paying jobs require some sort of high level education.
 
@@ -94,8 +94,8 @@ The higher level of education people get, the better their emplooment status wil
 The importance oof our finding is that the rich will stay rich. The ones who have a higher social status will be more likely to remain their status. The entire employment and education level is not much but a cycle. If you are getting a high level of education, you are more likely to get a good job and you are more likely to raise your kid with a high level of education. Opporutnites are limited within the resources we have in the U.S. If one's keeping the "spot" of getting a high level of education, there will be someone losing the "spot."
 
 
-## Conclusion 
-The Education & Social Status in the United States is the best way to represent the privilege hazard in the U.S. The one of the main topics of our course about the one who's in power suppress the ones who are not. The chances of getting a certain level of education is eventually rising in the U.S. But the spots for having a high social status is limited. As we dicussesed, the highest level of educatioon has been rising in the U.S. But that does not mean more people are having a higher social status. The way to determine wether people are having privilege is by comparing to other people. If we are having more and more bachelor degrees, the value of it actually decreases. We will be having more people reach more advanced degrees to find a high-earning job. The problem cannot be solved from having more peopple with higher level of education. The way to actually solved it is to make sure people are having same chances of getting base level of education so they can reach higher and get out of the endless cycle of high level education - social status. 
+## Conclusion
+The Education & Social Status in the United States is the best way to represent the privilege hazard in the U.S. The one of the main topics of our course about the one who's in power suppress the ones who are not. The chances of getting a certain level of education is eventually rising in the U.S. But the spots for having a high social status is limited. As we dicussesed, the highest level of educatioon has been rising in the U.S. But that does not mean more people are having a higher social status. The way to determine wether people are having privilege is by comparing to other people. If we are having more and more bachelor degrees, the value of it actually decreases. We will be having more people reach more advanced degrees to find a high-earning job. The problem cannot be solved from having more peopple with higher level of education. The way to actually solved it is to make sure people are having same chances of getting base level of education so they can reach higher and get out of the endless cycle of high level education - social status.
 
 
 ## The Dataset
@@ -172,6 +172,3 @@ MuonNeutrino. (2019, March 3). US Census Demographic Data. Kaggle. Retrieved Oct
 Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-test.csv
 
 Olafenwa, J. (2017, July 14). US adult income. Kaggle. Retrieved October 30, 2022, from https://www.kaggle.com/datasets/johnolafenwa/us-census-data?select=adult-training.csv
-
-
-
